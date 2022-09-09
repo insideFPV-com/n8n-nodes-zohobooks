@@ -30,10 +30,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ZohoBooksApi.credentials.ts"
+      "dist/credentials/ZohoBooksApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ZohoBooks/ZohoBooks.node.ts"
+      "dist/nodes/ZohoBooks/ZohoBooks.node.js"
     ]
   },
   "devDependencies": {
