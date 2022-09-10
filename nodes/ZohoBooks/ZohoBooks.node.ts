@@ -16,7 +16,7 @@ export class ZohoBooks implements INodeType {
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'ZohoBooks Api',
+				name: 'zohoBooksOAuth2Api',
 				required: true,
 			},
 		],
@@ -81,10 +81,22 @@ export class ZohoBooks implements INodeType {
 				noDataExpression: true,
 				displayOptions: {
 					show: {
-						resource: [ 'Bills' ]
-					}
+						resource: ['bills'],
+					},
 				},
 				options: [
+					{
+						name: 'Get Many',
+						value: 'getMany',
+						action: 'Get many bills',
+						description: 'Get the details of many bills',
+						routing: {
+							request: {
+								method: 'GET',
+								url: '=/bills',
+							},
+						},
+					},
 					{
 						name: 'Get',
 						value: 'get',
@@ -98,7 +110,20 @@ export class ZohoBooks implements INodeType {
 						},
 					},
 				],
-				default: 'get'
+				default: 'get',
+			},
+			{
+				displayName: 'Bill ID',
+				name: 'bill_id',
+				type: 'string',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['bills'],
+						operation: ['get']
+					}
+				},
+				default: '',
 			}
 		],
 	};
