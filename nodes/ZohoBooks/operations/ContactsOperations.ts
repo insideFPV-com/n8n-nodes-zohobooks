@@ -45,17 +45,4 @@ export const contactsOperations: INodeProperties[] = [
 		],
 		default: 'get',
 	},
-	{
-		displayName: 'Contact ID',
-		name: 'contact_id',
-		type: 'string',
-		noDataExpression: true,
-		displayOptions: {
-			show: {
-				resource: ['contacts'],
-				operation: ['get'],
-			},
-		},
-		default: '',
-	},
 ];

@@ -1,6 +1,14 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
-import { billsOperations } from './descriptions';
+import {
+	billsOperations,
+	contactsOperations
+} from './operations'
+
+import {
+	billsFields,
+	contactsFields
+} from './fields'
 
 export class ZohoBooks implements INodeType {
 	description: INodeTypeDescription = {
@@ -78,6 +86,10 @@ export class ZohoBooks implements INodeType {
 			},
 
 			...billsOperations,
+			...contactsOperations,
+
+			...billsFields,
+			...contactsFields,
 		],
 	};
 }

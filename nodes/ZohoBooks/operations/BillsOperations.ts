@@ -39,17 +39,4 @@ export const billsOperations: INodeProperties[] = [
 		],
 		default: 'get',
 	},
-	{
-		displayName: 'Bill ID',
-		name: 'bill_id',
-		type: 'string',
-		noDataExpression: true,
-		displayOptions: {
-			show: {
-				resource: ['bills'],
-				operation: ['get'],
-			},
-		},
-		default: '',
-	},
 ];
