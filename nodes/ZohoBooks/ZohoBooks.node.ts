@@ -1,5 +1,7 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
+import { billsOperations } from './descriptions';
+
 export class ZohoBooks implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Zoho Books',
@@ -74,57 +76,8 @@ export class ZohoBooks implements INodeType {
 				],
 				default: 'contacts',
 			},
-			{
-				displayName: 'Operations',
-				name: 'operation',
-				type: 'options',
-				noDataExpression: true,
-				displayOptions: {
-					show: {
-						resource: ['bills'],
-					},
-				},
-				options: [
-					{
-						name: 'Get Many',
-						value: 'getMany',
-						action: 'Get many bills',
-						description: 'Get the details of many bills',
-						routing: {
-							request: {
-								method: 'GET',
-								url: '=/bills',
-							},
-						},
-					},
-					{
-						name: 'Get',
-						value: 'get',
-						action: 'Get a bill',
-						description: 'Get the details of a bill',
-						routing: {
-							request: {
-								method: 'GET',
-								url: '=/bills/{{$parameter.bill_id}}',
-							},
-						},
-					},
-				],
-				default: 'get',
-			},
-			{
-				displayName: 'Bill ID',
-				name: 'bill_id',
-				type: 'string',
-				noDataExpression: true,
-				displayOptions: {
-					show: {
-						resource: ['bills'],
-						operation: ['get']
-					}
-				},
-				default: '',
-			}
+
+			...billsOperations,
 		],
 	};
 }
