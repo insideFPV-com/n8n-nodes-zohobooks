@@ -41,7 +41,42 @@ export const contactsOperations: INodeProperties[] = [
 				value: 'create',
 				action: 'Create a contact',
 				description: 'Create a contact with given information',
+				routing: {
+					request: {
+						method: 'POST',
+						url: '=/contacts',
+						body: {
+							contact_name: '={{$parameter.contact_name}}'
+						} as Object
+					}
+				}
 			},
+			{
+				name: 'Delete',
+				value: 'delete',
+				action: 'Delete a contact',
+				description: 'Delete an existing contact',
+				routing: {
+					request: {
+						method: 'DELETE',
+						url: '=/contacts/{{$parameter.contact_id}}'
+					}
+				}
+			},
+			{
+				name: 'Update',
+				value: 'update',
+				action: 'Update an existing contact',
+				routing: {
+					request: {
+						method: 'PUT',
+						url: '=/contacts/{{$parameter.contact_id}}',
+						body: {
+							contact_name: '={{$parameter.contact_name}}'
+						} as Object
+					}
+				}
+			}
 		],
 		default: 'get',
 	},
