@@ -9,7 +9,7 @@ export const contactsFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contacts'],
-				operation: ['get'],
+				operation: ['get', 'delete'],
 			},
 		},
 		default: '',
@@ -22,7 +22,7 @@ export const contactsFields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contacts'],
-				operation: ['create', 'delete', 'update'],
+				operation: ['create', 'update'],
 			},
 		},
 		default: '',
