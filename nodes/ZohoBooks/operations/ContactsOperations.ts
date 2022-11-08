@@ -47,7 +47,7 @@ export const contactsOperations: INodeProperties[] = [
 						url: '=/contacts',
 						body: {
 							contact_name: '={{$parameter.contact_name}}',
-						} as Object,
+						},
 					},
 				},
 			},
@@ -73,7 +73,7 @@ export const contactsOperations: INodeProperties[] = [
 						url: '=/contacts/{{$parameter.contact_id}}',
 						body: {
 							contact_name: '={{$parameter.contact_name}}',
-						} as Object,
+						},
 					},
 				},
 			},

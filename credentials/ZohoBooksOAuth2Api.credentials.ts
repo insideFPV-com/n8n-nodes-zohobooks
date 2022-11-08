@@ -8,9 +8,8 @@ export class ZohoBooksOAuth2Api implements ICredentialType {
 		type: 'generic',
 		properties: {
 			qs: {
-				'organization_id': '={{$credentials.orgId}}'
-			}
-
+				organization_id: '={{$credentials.orgId}}',
+			},
 		},
 	};
 	documentationUrl = 'https://github.com/Vrishtrix/n8n-nodes-zohobooks';
@@ -26,6 +25,6 @@ export class ZohoBooksOAuth2Api implements ICredentialType {
 			name: 'orgId',
 			type: 'string',
 			default: '',
-		}
+		},
 	];
 }
