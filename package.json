@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-zohobooks",
-	"version": "0.1.0",
+	"version": "0.1.1-alpha.2",
 	"description": "Nodes to integrate n8n with Zoho Books",
 	"keywords": [
 		"n8n-community-node-package"
