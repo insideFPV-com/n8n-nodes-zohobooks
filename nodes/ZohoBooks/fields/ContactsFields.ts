@@ -44,6 +44,11 @@ export const contactsFields: INodeProperties[] = [
 				name: 'Company Name',
 				value: 'company_name',
 				type: 'string'
+			},
+			{
+				name: 'Website',
+				value: 'website',
+				type: 'string'
 			}
 		]
 	}
