@@ -14,4 +14,4 @@ export const contactsFields: INodeProperties[] = [
 		},
 		default: '',
 	},
-]
+];

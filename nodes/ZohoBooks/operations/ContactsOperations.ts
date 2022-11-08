@@ -46,10 +46,10 @@ export const contactsOperations: INodeProperties[] = [
 						method: 'POST',
 						url: '=/contacts',
 						body: {
-							contact_name: '={{$parameter.contact_name}}'
-						} as Object
-					}
-				}
+							contact_name: '={{$parameter.contact_name}}',
+						} as Object,
+					},
+				},
 			},
 			{
 				name: 'Delete',
@@ -59,9 +59,9 @@ export const contactsOperations: INodeProperties[] = [
 				routing: {
 					request: {
 						method: 'DELETE',
-						url: '=/contacts/{{$parameter.contact_id}}'
-					}
-				}
+						url: '=/contacts/{{$parameter.contact_id}}',
+					},
+				},
 			},
 			{
 				name: 'Update',
@@ -72,11 +72,11 @@ export const contactsOperations: INodeProperties[] = [
 						method: 'PUT',
 						url: '=/contacts/{{$parameter.contact_id}}',
 						body: {
-							contact_name: '={{$parameter.contact_name}}'
-						} as Object
-					}
-				}
-			}
+							contact_name: '={{$parameter.contact_name}}',
+						} as Object,
+					},
+				},
+			},
 		],
 		default: 'get',
 	},

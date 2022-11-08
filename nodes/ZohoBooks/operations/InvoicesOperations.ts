@@ -38,5 +38,5 @@ export const invoicesOperations: INodeProperties[] = [
 			},
 		],
 		default: 'get',
-	}
-]
+	},
+];
