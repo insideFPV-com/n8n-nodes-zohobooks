@@ -1,6 +1,6 @@
 import { INodeProperties } from 'n8n-workflow';
 
-import { LanguageCodes } from '../extras/LanguageCodes';
+import { languageCodes } from '../extras/LanguageCodes';
 
 export const contactsFields: INodeProperties[] = [
 	{
@@ -56,7 +56,7 @@ export const contactsFields: INodeProperties[] = [
 				name: 'Language Code',
 				value: 'language_code',
 				type: 'options',
-				options: LanguageCodes,
+				options: languageCodes,
 			},
 		],
 	},

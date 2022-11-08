@@ -1,10 +1,10 @@
-export const LanguageCodes = [
+export const languageCodes = [
 	{
-		name: 'Dutch (de)',
+		name: 'Dutch (De)',
 		value: 'de',
 	},
 	{
-		name: 'Dutch (nl)',
+		name: 'Dutch (Nl)',
 		value: 'nl',
 	},
 	{
@@ -12,7 +12,7 @@ export const LanguageCodes = [
 		value: 'en',
 	},
 	{
-		name: 'English (gb)',
+		name: 'English (Gb)',
 		value: 'en_gb',
 	},
 	{
@@ -36,7 +36,7 @@ export const LanguageCodes = [
 		value: 'pt',
 	},
 	{
-		name: 'Portugese (br)',
+		name: 'Portugese (Br)',
 		value: 'pt_br',
 	},
 	{

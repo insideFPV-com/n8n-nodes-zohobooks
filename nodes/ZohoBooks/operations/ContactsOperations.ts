@@ -13,30 +13,6 @@ export const contactsOperations: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get Many',
-				value: 'getMany',
-				action: 'Get many contacts',
-				description: 'Get the details of many contacts',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '=/contacts',
-					},
-				},
-			},
-			{
-				name: 'Get',
-				value: 'get',
-				action: 'Get a contact',
-				description: 'Get the details of a contact',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '=/contacts/{{$parameter.contact_id}}',
-					},
-				},
-			},
-			{
 				name: 'Create',
 				value: 'create',
 				action: 'Create a contact',
@@ -60,6 +36,30 @@ export const contactsOperations: INodeProperties[] = [
 					request: {
 						method: 'DELETE',
 						url: '=/contacts/{{$parameter.contact_id}}',
+					},
+				},
+			},
+			{
+				name: 'Get',
+				value: 'get',
+				action: 'Get a contact',
+				description: 'Get the details of a contact',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '=/contacts/{{$parameter.contact_id}}',
+					},
+				},
+			},
+			{
+				name: 'Get Many',
+				value: 'getMany',
+				action: 'Get many contacts',
+				description: 'Get the details of many contacts',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '=/contacts',
 					},
 				},
 			},
