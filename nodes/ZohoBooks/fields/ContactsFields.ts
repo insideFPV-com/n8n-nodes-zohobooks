@@ -43,20 +43,23 @@ export const contactsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Company Name',
-				value: 'company_name',
+				displayName: 'Company Name',
+				name: 'company_name',
 				type: 'string',
+				default: '',
 			},
 			{
-				name: 'Website',
-				value: 'website',
+				displayName: 'Website',
+				name: 'website',
 				type: 'string',
+				default: '',
 			},
 			{
-				name: 'Language Code',
-				value: 'language_code',
+				displayName: 'Language Code',
+				name: 'language_code',
 				type: 'options',
 				options: languageCodes,
+				default: '',
 			},
 		],
 	},
@@ -74,9 +77,10 @@ export const contactsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Address Contains',
-				value: 'address_contains',
+				displayName: 'Address Contains',
+				name: 'address_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -86,9 +90,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Address Starts With',
-				value: 'address_startswith',
+				displayName: 'Address Starts With',
+				name: 'address_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -98,9 +103,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Company Name Contains',
-				value: 'company_name_contains',
+				displayName: 'Company Name Contains',
+				name: 'company_name_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -110,9 +116,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Company Name Starts With',
-				value: 'company_name_startswith',
+				displayName: 'Company Name Starts With',
+				name: 'company_name_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -122,9 +129,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Contact Name Contains',
-				value: 'contact_name_contains',
+				displayName: 'Contact Name Contains',
+				name: 'contact_name_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -134,9 +142,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Contact Name Starts With',
-				value: 'contact_name_startswith',
+				displayName: 'Contact Name Starts With',
+				name: 'contact_name_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -146,21 +155,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Email Contains',
-				value: 'email_contains',
+				displayName: 'Email Starts With',
+				name: 'email_startswith',
 				type: 'string',
-				routing: {
-					request: {
-						qs: {
-							email_contains: '={{$parameter.email_contains}}',
-						},
-					},
-				},
-			},
-			{
-				name: 'Email Starts With',
-				value: 'email_startswith',
-				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -170,29 +168,44 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Filter By',
-				value: 'filter_by',
-				type: 'options',
-				options: [
-					{
-						name: 'Status: All',
-						value: 'Status.All',
+				displayName: 'Email Contains',
+				name: 'email_contains',
+				type: 'string',
+				noDataExpression: true,
+				default: '',
+				routing: {
+					request: {
+						qs: {
+							email_contains: '={{$parameter.additional_fields.email_contains}}',
+						},
 					},
+				},
+			},
+			{
+				displayName: 'Filter By',
+				name: 'filter_by',
+				type: 'options',
+				default: 'Status.All',
+				options: [
 					{
 						name: 'Status: Active',
 						value: 'Status.Active',
 					},
 					{
-						name: 'Status: Inactive',
-						value: 'Status.Inactive',
+						name: 'Status: All',
+						value: 'Status.All',
+					},
+					{
+						name: 'Status: Crm',
+						value: 'Status.Crm',
 					},
 					{
 						name: 'Status: Duplicate',
 						value: 'Status.Duplicate',
 					},
 					{
-						name: 'Status: Crm',
-						value: 'Status.Crm',
+						name: 'Status: Inactive',
+						value: 'Status.Inactive',
 					},
 				],
 				routing: {
@@ -204,9 +217,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'First Name Contains',
-				value: 'first_name_contains',
+				displayName: 'First Name Contains',
+				name: 'first_name_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -216,9 +230,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'First Name Starts With',
-				value: 'first_name_startswith',
+				displayName: 'First Name Starts With',
+				name: 'first_name_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -228,9 +243,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Last Name Contains',
-				value: 'last_name_contains',
+				displayName: 'Last Name Contains',
+				name: 'last_name_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -240,9 +256,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Last Name Starts With',
-				value: 'last_name_startswith',
+				displayName: 'Last Name Starts With',
+				name: 'last_name_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -252,9 +269,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Phone Contains',
-				value: 'phone_contains',
+				displayName: 'Phone Contains',
+				name: 'phone_contains',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
@@ -264,9 +282,10 @@ export const contactsFields: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Phone Starts With',
-				value: 'phone_startswith',
+				displayName: 'Phone Starts With',
+				name: 'phone_startswith',
 				type: 'string',
+				default: '',
 				routing: {
 					request: {
 						qs: {
